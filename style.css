@@ -1,0 +1,20 @@
+:root {
+    --bg-color: #F0F0F0;
+    --txt-color: #221E22;
+    --yellow: #e29f01;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body,
+html {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
