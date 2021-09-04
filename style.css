@@ -39,7 +39,7 @@ html {
 }
 
 .nav {
-  z-index: 99;
+  z-index: 101;
   color: var(--white);
   display: flex;
   position: fixed;
@@ -65,6 +65,9 @@ html {
 }
 
 .menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
   z-index: 101;
   animation: left-to-right 1.5s forwards;
 }
@@ -81,6 +84,7 @@ html {
   height: 3px;
   border-radius: .5rem;
   background-color: var(--white);
+  transition: .4s;
 }
 
 .hamburger::before,
@@ -91,11 +95,27 @@ html {
 }
 
 .hamburger::before {
-  top: 10px;
+  top: -10px;
 }
 
 .hamburger::after {
-  top: -10px;
+  top: 10px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+}
+
+.hamburger.active::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
 }
 
 .sci {
